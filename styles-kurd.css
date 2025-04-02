@@ -1,0 +1,182 @@
+* {
+padding:0;
+margin:0;
+box-sizing: border-box;
+}
+
+body {
+background: white;
+font-family: Roboto, sans-serif;
+}
+
+h1,h6{
+text-align:center;
+padding:10px;
+}
+
+.wrap {
+display: flex;
+flex-flow: row wrap;
+text-align: center;
+overflow:hidden;
+}
+
+.wrap > *{
+padding:8px;
+margin:8px;
+flex: 1 100%;
+}
+
+.header {
+height:110px;
+background: green;
+}
+
+.menu {
+width: 100%;
+overflow:scroll;	display: flex;
+justify-content: space-around;
+margin-bottom: 10px;
+/* border: 1px solid blue; */
+}
+
+.logo {
+margin-left: 10px;
+}
+
+.flags {
+display: flex;
+flex-direction: row;
+width: 250px;
+justify-content: space-around;
+align-items: center;
+}
+
+.flag-kurd, .flag-ger {
+box-shadow: 10px 10px 20px black;
+border-radius: 3px;
+border: 1px solid;
+}
+
+.nav {
+width: 100%;
+min-height: 30px;
+background: whitesmoke;
+line-height: 30px;
+margin-bottom: 10px;
+text-align: center;
+}
+
+.navlinks {
+padding: 0 5px;
+text-decoration: none;
+}
+
+.main {
+height:450px;
+border: 1px solid;
+overflow:scroll;
+}
+
+.main img {
+height:100%;
+width:100%;
+}
+
+.main > h2, p {
+text-align: justify;
+margin:10px;
+}
+
+.main-pics {
+height:2000px;
+border: 1px solid;
+overflow:scroll;
+}
+
+img {
+  width: 320px; /* init. 300, original pic width 640 */
+/*  height: 143px;  200, then */
+  object-fit: cover;
+  object-position: bottom;
+	transition: transform 0.3s ease-in-out;
+  padding: 5px;
+}
+
+img:hover {
+  cursor: pointer;
+  transition: 0.5s;
+	transform: scale(1.05);
+}
+
+.logo > img {
+	cursor:default;
+	transform:none;
+	width:100px
+}
+
+.container {
+display: flex;
+max-width: 1200px; /* 1200, then */
+width: 100%;
+flex-wrap: wrap;
+justify-content: center;
+margin-bottom: 100px;
+}
+
+.side-left{
+width: 20%;
+min-height: 400px;
+color: black;
+display: block;
+padding:5px;
+font-size: 10px;
+border: 1px solid;
+}
+
+.side-right{
+background: white;
+text-align: left;
+border: 1px solid;
+}
+
+.footer {
+height: 100px;
+background: green;
+display:flex;
+justify-content: center;
+align-items: center;
+}
+
+.imprint {
+
+}
+
+@media all and (min-width: 600px) {
+.side {
+flex:1;
+}
+}
+
+
+@media all and (min-width: 800px) {
+.main {
+flex:3;
+}
+
+.main {
+order:2;
+}
+
+.side-left {
+order:1;
+}
+
+.side-right {
+order:2;
+}
+
+.footer {
+order:4;
+}
+}
