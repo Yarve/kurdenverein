@@ -1,182 +1,98 @@
-* {
-padding:0;
-margin:0;
-box-sizing: border-box;
+* { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
 }
-
 body {
-background: white;
-font-family: Roboto, sans-serif;
+  margin: 0;
+  font-family: sans-serif;
+  background: #f7f7f5;
+  color: #222;
 }
-
-h1,h6{
-text-align:center;
-padding:10px;
+header {
+  background: white;
+  text-align: center;
+  padding: 1rem 1rem 0.5rem;
 }
-
-.wrap {
-display: flex;
-flex-flow: row wrap;
-text-align: center;
-overflow:hidden;
+header img {
+  max-width: 150px;
 }
-
-.wrap > *{
-padding:8px;
-margin:8px;
-flex: 1 100%;
+.lang-switch {
+  margin: 0.5rem auto;
+  font-weight: bold;
 }
-
-.header {
-height:110px;
-background: green;
+.lang-switch span {
+  margin: 0 0.5rem;
+  cursor: pointer;
 }
-
-.menu {
-width: 100%;
-overflow:scroll;	display: flex;
-justify-content: space-around;
-margin-bottom: 10px;
-/* border: 1px solid blue; */
+nav {
+  display: flex;
+  justify-content: center;
+  background:#009000; /* islamic green */
+  flex-wrap: wrap;
+}
+nav a {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+}
+nav a:hover {
+  background: #009999;
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem;
+  gap: 1rem;
+}
+.main-left {
+  flex: 2 1 600px;
+}
+.main-right {
+  flex: 1 1 280px;
 }
 
 .logo {
-margin-left: 10px;
+  width: 900px;
 }
-
-.flags {
-display: flex;
-flex-direction: row;
-width: 250px;
-justify-content: space-around;
-align-items: center;
+.project, .section {
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 1rem;
 }
-
-.flag-kurd, .flag-ger {
-box-shadow: 10px 10px 20px black;
-border-radius: 3px;
-border: 1px solid;
+.project img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
 }
-
-.nav {
-width: 100%;
-min-height: 30px;
-background: whitesmoke;
-line-height: 30px;
-margin-bottom: 10px;
-text-align: center;
+.project h2, .section h2 {
+  margin: 0.5rem 0 1rem;
 }
-
-.navlinks {
-padding: 0 5px;
-text-decoration: none;
+.project p, .section p {
+  margin: 0.5rem 0 1rem;
 }
-
-.main {
-height:450px;
-border: 1px solid;
-overflow:scroll;
+.donate {
+  background: #fff8e1;
+  border: 1px solid #ffd54f;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
 }
-
-.main img {
-height:100%;
-width:100%;
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
 }
-
-.main > h2, p {
-text-align: justify;
-margin:10px;
-}
-
-.main-pics {
-height:2000px;
-border: 1px solid;
-overflow:scroll;
-}
-
-img {
-  width: 320px; /* init. 300, original pic width 640 */
-/*  height: 143px;  200, then */
-  object-fit: cover;
-  object-position: bottom;
-	transition: transform 0.3s ease-in-out;
-  padding: 5px;
-}
-
-img:hover {
-  cursor: pointer;
-  transition: 0.5s;
-	transform: scale(1.05);
-}
-
-.logo > img {
-	cursor:default;
-	transform:none;
-	width:100px
-}
-
-.container {
-display: flex;
-max-width: 1200px; /* 1200, then */
-width: 100%;
-flex-wrap: wrap;
-justify-content: center;
-margin-bottom: 100px;
-}
-
-.side-left{
-width: 20%;
-min-height: 400px;
-color: black;
-display: block;
-padding:5px;
-font-size: 10px;
-border: 1px solid;
-}
-
-.side-right{
-background: white;
-text-align: left;
-border: 1px solid;
-}
-
-.footer {
-height: 100px;
-background: green;
-display:flex;
-justify-content: center;
-align-items: center;
-}
-
-.imprint {
-
-}
-
-@media all and (min-width: 600px) {
-.side {
-flex:1;
-}
-}
-
-
-@media all and (min-width: 800px) {
-.main {
-flex:3;
-}
-
-.main {
-order:2;
-}
-
-.side-left {
-order:1;
-}
-
-.side-right {
-order:2;
-}
-
-.footer {
-order:4;
-}
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
 }
