@@ -9,6 +9,29 @@ body {
   color: #222;
 }
 
+h1 {
+  font-family: 'Eagle Lake', cursive;
+  font-size: 4em;
+}
+
+header {
+  background: white;
+  text-align: center;
+  padding: 1rem 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header img {
+  max-width: 150px;
+}
+.flag {
+  cursor: pointer;
+  height: 40px;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -41,6 +64,8 @@ nav a:hover {
 .logo {
   width: 900px;
 }
+
+
 .project, .section {
   background: white;
   border-radius: 6px;
