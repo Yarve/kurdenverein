@@ -9,6 +9,11 @@ body {
   color: #222;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 h1 {
   font-family: 'Eagle Lake', cursive;
   font-size: 4em;
@@ -54,19 +59,58 @@ nav a:hover {
   padding: 1rem;
   gap: 1rem;
 }
-.main-left {
-  flex: 2 1 600px;
+
+/* Parent of 3.0 and 4.2 */
+.top-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }
-.main-right {
-  flex: 1 1 280px;
+
+/* 3.0 and 4.2 should be same heigth */
+.photo, .donate {
+  flex: 1 1 0;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.donate img {
+  width:200px;
+  margin: 0 auto;
+}
+
+/* article has the full width */
+.article {
+  display: flex;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  gap: 1rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Image left, article text is right */
+.article img {
+  max-width: auto;
+  height: 200px;
+  border-radius: 6px;
+}
+
+.article .text {
+  flex: 1;
 }
 
 .logo {
   width: 900px;
 }
 
-
-.project, .section {
+.article-content {
   background: white;
   border-radius: 6px;
   overflow: hidden;
@@ -74,17 +118,19 @@ nav a:hover {
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   padding: 1rem;
 }
-.project img {
+.article-content img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 6px;
 }
-.project h2, .section h2 {
+.article-content h2 {
   margin: 0.5rem 0 1rem;
+  font-size: 32px;
 }
-.project p, .section p {
+.article-content p {
   margin: 0.5rem 0 1rem;
+  font-size: 20px;
 }
 .donate {
   background: #fff8e1;
@@ -94,6 +140,10 @@ nav a:hover {
   border-radius: 8px;
 }
 footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: #333;
   color: white;
   text-align: center;
@@ -101,8 +151,55 @@ footer {
   font-size: 0.9rem;
   margin-top: 2rem;
 }
+
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .top-row {
+    flex-direction: column;
+  }
+
+  .article {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 90vw;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 0.8rem;
+    text-align: center;
+  }
+
+  .flag {
+    height: 30px;
+    margin: 0 4px;
+  }
+
+  .donate img {
+    width: 100%;
+    max-width: 200px;
   }
 }
