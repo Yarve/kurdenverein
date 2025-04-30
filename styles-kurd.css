@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+body,html {
+  position: relative;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -21,7 +27,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 header {
@@ -151,7 +156,7 @@ form {
 
 .article {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
   padding: 2rem;
   background: white;
@@ -161,7 +166,7 @@ form {
 
 .article img {
   width: 100%;
-  max-width: 400px;
+  max-width: 2000px;
   height: auto;
   border-radius: 8px;
 }
@@ -185,10 +190,10 @@ form {
 
 footer {
   background: #333;
-  color: white;
+  color: ivory;
   text-align: center;
   padding: 1.5rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-top: 2rem;
 }
 
@@ -224,8 +229,16 @@ footer {
 
 
 @media (max-width: 768px) {
+
+  .main {
+    margin: 0;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .flag {
@@ -239,6 +252,7 @@ footer {
 
   nav a {
     padding: 0.8rem;
+    font-size: 1rem;
   }
 
   .top-row,
@@ -252,7 +266,17 @@ footer {
   }
 
   .arabic {
-    width: 60%;
+    width: 80%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .donate {
+    padding: 3rem 1rem;
   }
 
   .donate h2,
@@ -265,7 +289,24 @@ footer {
     font-size: 1rem;
   }
 
+  .donate img {
+    width: 80%;
+    max-width: 50%;
+  }
+
   .column img {
     max-width: 100%;
   }
+
+  footer {
+    font-size: 0.5em;
+    padding: 10px 0;
+  }
+
+/* footer {
+  padding: 1.5rem;
+  font-size: 2rem;
+  margin-top: 2rem;
+} */
+
 }
